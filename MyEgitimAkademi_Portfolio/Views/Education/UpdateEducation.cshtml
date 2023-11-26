@@ -1,0 +1,22 @@
+﻿﻿@model MyEgitimAkademi_Portfolio.Models.Education
+@{
+    ViewBag.Title = "UpdateEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2> Eğitim Bilgileri Güncelleme  Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.EducationID, new { @class = "form-control" })
+    <label>Okul Adı</label>
+    @Html.TextBoxFor(x => x.EducationTitle, new { @class = "form-control" })
+    <label>Okul Başlangıç Tarihi</label>
+    @Html.TextBoxFor(x => x.EducationBaslangıc, new { @class = "form-control" })
+    <label>Okul Bitiş Tarihi</label>
+    @Html.TextBoxFor(x => x.EducationBitis, new { @class = "form-control" })
+    <label>Okul Açıklaması</label>
+    @Html.TextBoxFor(x => x.EducationDescription, new { @class = "form-control" })
+    @*<label>Fiyat</label>
+        @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })*@
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+</form>

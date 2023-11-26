@@ -1,0 +1,35 @@
+﻿﻿@model List<MyEgitimAkademi_Portfolio.Models.Education>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<head>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<h2>Projelerim Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        @*<th>#</th>*@
+        <th>Okul Adı</th>
+        <th>Okul Başlangıç Tarihi</th>
+        <th>Okul Bitiş Tarihi</th>
+        <th>Okul Açıklaması</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EducationTitle</td>
+            <td>@item.EducationBaslangıc</td>
+            <td>@item.EducationBitis</td>
+            <td>@item.EducationDescription</td>
+            <td><a href="/Education/DeleteEducation/@item.EducationID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Education/UpdateEducation/@item.EducationID" class="btn btn-outline-success">Güncelle</a></td>
+            @*<td><a href="/Project/GithubProject/@item.EducationID" class="btn btn-outline-warning">GitHub </a></td>*@
+        </tr>
+    }
+</table>
+<a href="/Education/AddEducation/" class="btn btn-outline-primary">Yeni Eğitim Girişi</a>

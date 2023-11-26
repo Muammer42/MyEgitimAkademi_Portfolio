@@ -1,0 +1,76 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Admin Paneli</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/sidebar-09/css/style.css">
+</head>
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                </button>
+            </div>
+            <div class="img bg-wrap text-center py-4" style="background-image: url(/sidebar-09/images/bg_1.jpg);">
+                <div class="user-logo">
+                    <div class="img" style="background-image: url('/sidebar-09/images/bwn.jpg');"></div>
+                    <h3>Muammer Metin</h3>
+                </div>
+            </div>
+            <ul class="list-unstyled components mb-5">
+                <li class="active">
+                    <a href="/Statistic/Index/"><span class="fa fa-home mr-3"></span> Dashboard</a>
+                </li>
+                <li>
+                    <a href="/Education/Index/"><span class="fa fa-download mr-3 "><small class="d-flex align-items-center justify-content-center"></small></span> Eğitim Hayatım</a>
+                </li>
+
+                <li>
+                    <a href="/Skill/Index/"><span class="fa fa-trophy mr-3"></span> Yeteneklerim</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("GetCv","Cv")"><span class="fa fa-cog mr-3"></span> Özgeçmişim</a>
+                </li>
+                @*<li>
+                    <a href="#"><span class="fa fa-support mr-3"></span> Deneyimlerim</a>
+                </li>*@
+                <li>
+                    <a href="/Project/Index/"><span class="fa fa-print mr-3"></span> Projelerim</a>
+                </li>
+                <li>
+                    <a href="/Contact/MessageList/"><span class="fa fa-cloud mr-3"></span>Gelen Mesajlarım</a>
+                </li>
+                <li>
+                    <a href="/Testimonial/Index/"><span class="fa fa-level-up mr-3"></span>Referanslarım</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            @*<h2 class="mb-4">Sidebar #09</h2>*@
+            @RenderBody()
+            
+        </div>
+    </div>
+
+    <script src="/sidebar-09/js/jquery.min.js"></script>
+    <script src="/sidebar-09/js/popper.js"></script>
+    <script src="/sidebar-09/js/bootstrap.min.js"></script>
+    <script src="/sidebar-09/js/main.js"></script>
+</body>
+</html>
